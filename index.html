@@ -143,11 +143,23 @@
             font-family: var(--code-font);
             font-size: 0.9rem;
             transition: all 0.3s ease;
+            margin-right: 10px;
         }
 
         .btn:hover {
             background: rgba(88, 166, 255, 0.1);
             transform: translateY(-2px);
+        }
+        
+        /* Secondary Button Style */
+        .btn-secondary {
+            border: 1px solid var(--text-secondary);
+            color: var(--text-secondary);
+        }
+        .btn-secondary:hover {
+            border-color: var(--text-primary);
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         /* --- Section Styling --- */
@@ -183,7 +195,7 @@
             display: grid;
             grid-template-columns: 3fr 2fr;
             gap: 50px;
-            align-items: center; /* Changed to center align */
+            align-items: center;
         }
 
         .about-text p {
@@ -218,7 +230,7 @@
         .about-img {
             position: relative;
             max-width: 300px;
-            margin: 0 auto; /* Center in its column */
+            margin: 0 auto;
         }
 
         .about-img img {
@@ -227,11 +239,10 @@
             display: block;
             position: relative;
             z-index: 2;
-            filter: grayscale(100%); /* Cool effect: B&W until hover */
+            filter: grayscale(100%);
             transition: all 0.3s ease;
         }
 
-        /* The Frame Effect */
         .about-img::after {
             content: "";
             position: absolute;
@@ -246,7 +257,7 @@
         }
 
         .about-img:hover img {
-            filter: none; /* Color on hover */
+            filter: none;
             transform: translate(-5px, -5px);
         }
 
@@ -342,7 +353,7 @@
             .hero h2 { font-size: 1.5rem; }
             section { padding: 60px 2rem; }
             .about-content { grid-template-columns: 1fr; }
-            .about-img { margin-top: 50px; } /* Add space between text and image on mobile */
+            .about-img { margin-top: 50px; }
             .nav-links { display: none; }
         }
 
@@ -393,7 +404,6 @@
                 </ul>
             </div>
             
-            <!-- IMAGE SECTION ADDED HERE -->
             <div class="about-img">
                 <img src="profile.jpg" alt="Shiva Sai">
             </div>
@@ -406,7 +416,7 @@
         <h2 class="section-title"><span>02.</span> Projects & Learning</h2>
         <div class="projects-grid">
             
-            <!-- Project 1: The REAL one -->
+            <!-- Project 1 -->
             <div class="project-card">
                 <div class="folder-icon">
                     <i class="far fa-folder"></i>
@@ -427,6 +437,10 @@
             <div class="project-card" style="border-style: dashed; opacity: 0.8;">
                 <div class="folder-icon">
                     <i class="fas fa-book-open"></i>
+                    <div class="project-links">
+                        <!-- Linked to your main profile so they can see activity -->
+                        <a href="https://github.com/shivasai573" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
                 <h3>Current Studies</h3>
                 <p>I am currently diving deep into Data Structures and Operating Systems. Working on understanding memory management and process scheduling.</p>
@@ -444,17 +458,34 @@
     <section id="contact" style="text-align: center; max-width: 600px; margin: 0 auto;">
         <h2 class="section-title" style="justify-content: center;"><span>03.</span> What's Next?</h2>
         <h1 style="font-size: 3rem; margin-bottom: 1rem;">Get In Touch</h1>
-        <p style="color: var(--text-secondary); margin-bottom: 3rem;">
-            I'm a student eager to learn. If you have advice on Systems Programming, or just want to connect, my inbox is always open!
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+            I'm a student eager to learn. Whether you have a question about my projects or just want to say hi, feel free to contact me!
         </p>
-        <a href="mailto:shivasai573@gmail.com" class="btn">Say Hello</a>
+        
+        <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+            <!-- Email -->
+            <a href="mailto:shivasai573@gmail.com" class="btn" style="width: 100%; max-width: 300px;">
+                <i class="far fa-envelope"></i> shivasai573@gmail.com
+            </a>
+            
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/shivasai573" target="_blank" class="btn btn-secondary" style="width: 100%; max-width: 300px;">
+                <i class="fab fa-linkedin"></i> Connect on LinkedIn
+            </a>
+
+            <!-- Phone (Added) -->
+            <a href="tel:+91XXXXXXXXXX" class="btn btn-secondary" style="width: 100%; max-width: 300px;">
+                <i class="fas fa-phone"></i> +91 XXXXX XXXXX
+            </a>
+        </div>
     </section>
 
     <footer>
         <p>Designed & Built by Shiva Sai</p>
         <div style="margin-top: 10px; font-size: 1.2rem;">
-            <a href="https://github.com/shivasai573" style="margin: 0 10px; color: var(--text-secondary);"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/shivasai573" style="margin: 0 10px; color: var(--text-secondary);"><i class="fab fa-linkedin"></i></a>
+            <!-- Footer Links Updated -->
+            <a href="https://github.com/shivasai573" target="_blank" style="margin: 0 10px; color: var(--text-secondary);"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/shivasai573" target="_blank" style="margin: 0 10px; color: var(--text-secondary);"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 
